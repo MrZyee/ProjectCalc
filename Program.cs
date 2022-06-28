@@ -66,10 +66,14 @@ namespace FirstProject
                 {
                     Console.WriteLine(calculator.srTablica());
                 }
-                //else if (op == "0")
-                //{
-                //    Console.WriteLine(calculator.wartTablicy());
-                //}
+                else if (op == "0")
+                {
+                    Console.WriteLine(calculator.wartTablicyMax());
+                }
+                else if (op == "*")
+                {
+                    Console.WriteLine(calculator.wartTablicyMin());
+                }
 
                 Console.ReadLine();
 

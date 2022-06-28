@@ -8,7 +8,7 @@ namespace FirstProject
 {
     internal class Calculator
     {
-        {
+        
         public int add()
         {
             int a = Convert.ToInt32(Console.ReadLine());
@@ -142,4 +142,4 @@ namespace FirstProject
         }
     }
 }
-}
+
