@@ -26,7 +26,8 @@ namespace FirstProject
                     + "(7) - liczba doskonała\n"
                     + "(8) - potęga\n"
                     + "(9) - średnia liczba z tablicy\n"
-                    + "(0) - max i min z tablicy ");
+                    + "(0) - max z tablicy \n"
+                    + "(*) - min z tablicy \n");
                 op = Console.ReadLine();
 
 

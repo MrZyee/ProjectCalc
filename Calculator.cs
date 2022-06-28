@@ -112,11 +112,12 @@ namespace FirstProject
             {
                 tablica[i] = int.Parse(Console.ReadLine());
             }
-            for (int i = 1; i < tablica.Length; i++)
+
+            for (int i = 0; i < tablica.Length; i++)
             {
-                if (max < tablica[a])
+                if (max < tablica[i])
                 {
-                    max = tablica[a];
+                    max = tablica[i];
                 }
             }
             return max;
@@ -133,9 +134,9 @@ namespace FirstProject
             }
             for (int i = 0; i < tablica.Length; i++)
             {
-                if (min > tablica[a])
+                if (min < tablica[i])
                 {
-                    min = tablica[a];
+                    min = tablica[i];
                 }
             }
             return min;
