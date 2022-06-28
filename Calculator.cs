@@ -11,19 +11,23 @@ namespace FirstProject
         
         public int add()
         {
+            Console.WriteLine("Podaj dwie liczby");
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.Green;
             return a + b;
         }
         public double subtr()
         {
+            Console.WriteLine("Podaj dwie liczby");
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
-
+            Console.ForegroundColor = ConsoleColor.Red;
             return a - b;
         }
         public double div()
         {
+            Console.WriteLine("Podaj dwie liczby");
             double a = Convert.ToInt32(Console.ReadLine());
             double b = Convert.ToInt32(Console.ReadLine());
             if (b == 0 || a == 0)
@@ -31,13 +35,15 @@ namespace FirstProject
                 Console.WriteLine("Nie dzielimy przez 0");
                 return 0;
             }
-
+            Console.ForegroundColor = ConsoleColor.Yellow;
             return a / (b * 1.0);
         }
         public double multiply()
         {
+            Console.WriteLine("Podaj dwie liczby");
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.Cyan;
             return a * b;
         }
         public bool pierwsza()
@@ -50,6 +56,7 @@ namespace FirstProject
                     return false;
                 }
             }
+            Console.ForegroundColor = ConsoleColor.Magenta;
             return true;
         }
 
@@ -61,7 +68,7 @@ namespace FirstProject
 
             for (int i = 1; i <= liczba; i++)
                 silnia*=i;
-
+            Console.ForegroundColor = ConsoleColor.DarkBlue;
             return silnia;
         }
         public bool doskonala()
@@ -71,12 +78,14 @@ namespace FirstProject
             for (int i = 1; i <= n/2; i++)
                 if (n % i == 0)
                     suma += i;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             return (suma == n);
         }
         public int potega()
         {
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
             return a ^ b;
 
         }
@@ -97,7 +106,7 @@ namespace FirstProject
             {
                 suma += tablica[i];
             }
-
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             srednia = suma / a;
 
             return srednia;
@@ -120,6 +129,7 @@ namespace FirstProject
                     max = tablica[i];
                 }
             }
+            Console.ForegroundColor = ConsoleColor.DarkRed;
             return max;
         }
         public double wartTablicyMin()
@@ -139,6 +149,7 @@ namespace FirstProject
                     min = tablica[i];
                 }
             }
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             return min;
         }
     }
