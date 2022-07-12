@@ -11,72 +11,77 @@ namespace FirstProject
         static void Main(string[] args)
         {
             {
-                string op;
+                Console.WriteLine("Wybierz działanie: \n"
+                    + "1. Adding \n"
+                    + "2. Subtraction \n"
+                    + "3. Multiplication \n"
+                    + "4. Division \n"
+                    + "5. Prime numbers \n"
+                    + "6. Factorial \n"
+                    + "7. Perfect number\n"
+                    + "8. To the power\n"
+                    + "9. Average number from the table\n"
+                    + "0. Maximum number from the table \n"
+                    + "*  Minimum value from the table \n");
 
-
+                string operation = Console.ReadLine();
                 Calculator calculator = new Calculator();
 
-                Console.WriteLine("Wybierz działanie: \n"
-                    + "(1) :dodawanie \n"
-                    + "(2) :odejmowanie \n"
-                    + "(3) : mnożenie \n"
-                    + "(4) : dzielenie \n"
-                    + "(5) - liczby pierwsze\n"
-                    + "(6) - silnia\n"
-                    + "(7) - liczba doskonała\n"
-                    + "(8) - potęga\n"
-                    + "(9) - średnia liczba z tablicy\n"
-                    + "(0) - max z tablicy \n"
-                    + "(*) - min z tablicy \n");
-                op = Console.ReadLine();
+                Console.WriteLine("Podaj dwie liczby: ");
+                int argument1 = Convert.ToInt32(Console.ReadLine());
+                int argument2 = Convert.ToInt32(Console.ReadLine());
 
 
-                if (op == "1")
+                if (operation == "1")
                 {
-                    Console.WriteLine(calculator.add());
+                    Console.WriteLine(calculator.Adding(argument1, argument2));
                 }
-                else if (op == "2")
+                else if (operation == "2")
                 {
-                    Console.WriteLine(calculator.subtr());
+                    Console.WriteLine(calculator.Subtraction());
                 }
-                else if (op == "3")
+                else if (operation == "3")
                 {
-                    Console.WriteLine(calculator.multiply());
+                    Console.WriteLine(calculator.Multiplication());
                 }
-                else if (op == "4")
+                else if (operation == "4")
                 {
-                    Console.WriteLine(calculator.div());
+                    Console.WriteLine(calculator.Division());
                 }
-                else if (op == "5")
+                else if (operation == "5")
                 {
-                    Console.WriteLine(calculator.pierwsza());
+                    Console.WriteLine(calculator.PrimeNumbers());
                 }
-                else if (op == "6")
+                else if (operation == "6")
                 {
-                    Console.WriteLine(calculator.silnia());
+                    Console.WriteLine(calculator.Factorial());
                 }
-                else if (op == "7")
+                else if (operation == "7")
                 {
-                    Console.WriteLine(calculator.doskonala());
+                    Console.WriteLine(calculator.PerfectNumber());
                 }
-                else if (op == "8")
+                else if (operation == "8")
                 {
-                    Console.WriteLine(calculator.potega());
+                    Console.WriteLine(calculator.ToThePower());
                 }
-                else if (op == "9")
+                else if (operation == "9")
                 {
-                    Console.WriteLine(calculator.srTablica());
+                    Console.WriteLine(calculator.AverageNumberFromTheTable());
                 }
-                else if (op == "0")
+                else if (operation == "0")
                 {
-                    Console.WriteLine(calculator.wartTablicyMax());
+                    Console.WriteLine(calculator.MaximumValueFromTheTable());
                 }
-                else if (op == "*")
+                else if (operation == "*")
                 {
-                    Console.WriteLine(calculator.wartTablicyMin());
+                    Console.WriteLine(calculator.MinimumValueFromTheTable());
                 }
 
                 Console.ReadLine();
+
+
+
+                
 
             }
 

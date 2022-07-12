@@ -8,16 +8,12 @@ namespace FirstProject
 {
     internal class Calculator
     {
-        
-        public int add()
+        public int Adding(int arument1 ,int argument2)
         {
-            Console.WriteLine("Podaj dwie liczby");
-            int a = Convert.ToInt32(Console.ReadLine());
-            int b = Convert.ToInt32(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.Green;
-            return a + b;
+            return arument1 + argument2;
         }
-        public double subtr()
+        public double Subtraction()
         {
             Console.WriteLine("Podaj dwie liczby");
             int a = Convert.ToInt32(Console.ReadLine());
@@ -25,7 +21,7 @@ namespace FirstProject
             Console.ForegroundColor = ConsoleColor.Red;
             return a - b;
         }
-        public double div()
+        public double Division()
         {
             Console.WriteLine("Podaj dwie liczby");
             double a = Convert.ToInt32(Console.ReadLine());
@@ -38,7 +34,7 @@ namespace FirstProject
             Console.ForegroundColor = ConsoleColor.Yellow;
             return a / (b * 1.0);
         }
-        public double multiply()
+        public double Multiplication()
         {
             Console.WriteLine("Podaj dwie liczby");
             int a = Convert.ToInt32(Console.ReadLine());
@@ -46,7 +42,7 @@ namespace FirstProject
             Console.ForegroundColor = ConsoleColor.Cyan;
             return a * b;
         }
-        public bool pierwsza()
+        public bool PrimeNumbers()
         {
             int a = Convert.ToInt32(Console.ReadLine());
             for (int i = 2; i < a; i++)
@@ -60,7 +56,7 @@ namespace FirstProject
             return true;
         }
 
-        public int silnia()
+        public int Factorial()
         {
             int liczba, silnia = 1;
             Console.WriteLine("Podaj liczbę: ");
@@ -71,7 +67,7 @@ namespace FirstProject
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             return silnia;
         }
-        public bool doskonala()
+        public bool PerfectNumber()
         {
             int n = 0;
             int suma = 0;
@@ -81,7 +77,7 @@ namespace FirstProject
             Console.ForegroundColor = ConsoleColor.DarkGray;
             return (suma == n);
         }
-        public int potega()
+        public int ToThePower()
         {
             int a = Convert.ToInt32(Console.ReadLine());
             int b = Convert.ToInt32(Console.ReadLine());
@@ -89,7 +85,7 @@ namespace FirstProject
             return a ^ b;
 
         }
-        public double srTablica()
+        public double AverageNumberFromTheTable()
         {
             double srednia = 0;
             double suma = 0;
@@ -111,7 +107,7 @@ namespace FirstProject
 
             return srednia;
         }
-        public double wartTablicyMax()
+        public double MaximumValueFromTheTable()
         {
             int max = 0;
             Console.WriteLine("Podaj ilość elementów w tablicy:");
@@ -132,7 +128,7 @@ namespace FirstProject
             Console.ForegroundColor = ConsoleColor.DarkRed;
             return max;
         }
-        public double wartTablicyMin()
+        public double MinimumValueFromTheTable()
         {
             int min = 0;
             Console.WriteLine("Podaj ilość elementów w tablicy:");
