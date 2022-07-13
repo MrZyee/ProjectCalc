@@ -11,29 +11,16 @@ namespace FirstProject
         static void Main(string[] args)
         {
             {
-                Console.WriteLine("Wybierz działanie: \n"
-                    + "1. Adding \n"
-                    + "2. Subtraction \n"
-                    + "3. Multiplication \n"
-                    + "4. Division \n"
-                    + "5. Prime numbers \n"
-                    + "6. Factorial \n"
-                    + "7. Perfect number\n"
-                    + "8. To the power\n"
-                    + "9. Average number from the table\n"
-                    + "0. Maximum number from the table \n"
-                    + "*  Minimum value from the table \n");
+                Calculator calculator = new Calculator();
+                CalculatorAdvanced calculatoradvanced = new CalculatorAdvanced();
+                FunctionCalculator function = new FunctionCalculator();
 
-                string operation = Console.ReadLine();
+                string operation = Convert.ToString(function.Function());
 
                 Console.WriteLine("Podaj dwie liczby: ");
                 int argument1 = Convert.ToInt32(Console.ReadLine());
                 int argument2 = Convert.ToInt32(Console.ReadLine());
 
-
-                
-                Calculator calculator = new Calculator();
-                CalculatorAdvanced calculatoradvanced = new CalculatorAdvanced();
 
                 if (operation == "1")
                 {
