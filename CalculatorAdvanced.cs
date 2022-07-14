@@ -39,7 +39,7 @@ namespace FirstProject
             for (int i = 1; i <= n/2; i++)
                 if (n % i == 0)
                     suma += i;
-            Console.ForegroundColor = ConsoleColor.DarkGray;
+            //Console.ForegroundColor = ConsoleColor.DarkGray;
             return (suma == n);
         }
         public double AverageNumberFromTheTable()

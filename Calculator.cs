@@ -39,7 +39,7 @@ namespace FirstProject
         public int ToThePower(int arument1, int argument2)
         {
             //Console.ForegroundColor = ConsoleColor.DarkGreen;
-            return arument1 ^ argument2;
+            return (int)Math.Pow(arument1,argument2);
 
         }
     }

@@ -21,50 +21,44 @@ namespace FirstProject
                 int argument1 = Convert.ToInt32(Console.ReadLine());
                 int argument2 = Convert.ToInt32(Console.ReadLine());
 
-
-                if (operation == "1")
+                switch (operation)
                 {
-                    Console.WriteLine(calculator.Adding(argument1, argument2));
-                }
-                else if (operation == "2")
-                {
-                    Console.WriteLine(calculator.Subtraction(argument1, argument2));
-                }
-                else if (operation == "3")
-                {
-                    Console.WriteLine(calculator.Multiplication(argument1, argument2));
-                }
-                else if (operation == "4")
-                {
-                    Console.WriteLine(calculator.Division(argument1, argument2));
-                }
-                else if (operation == "5")
-                {
-                    Console.WriteLine(calculatoradvanced.PrimeNumbers());
-                }
-                else if (operation == "6")
-                {
-                    Console.WriteLine(calculatoradvanced.Factorial());
-                }
-                else if (operation == "7")
-                {
-                    Console.WriteLine(calculatoradvanced.PerfectNumber());
-                }
-                else if (operation == "8")
-                {
-                    Console.WriteLine(calculator.ToThePower(argument1, argument2));
-                }
-                else if (operation == "9")
-                {
-                    Console.WriteLine(calculatoradvanced.AverageNumberFromTheTable());
-                }
-                else if (operation == "0")
-                {
-                    Console.WriteLine(calculatoradvanced.MaximumValueFromTheTable());
-                }
-                else if (operation == "*")
-                {
-                    Console.WriteLine(calculatoradvanced.MinimumValueFromTheTable());
+                    case "1":
+                        Console.WriteLine(calculator.Adding(argument1, argument2));
+                        break;
+                    case "2":
+                        Console.WriteLine(calculator.Subtraction(argument1, argument2));
+                        break;
+                    case "3":
+                        Console.WriteLine(calculator.Multiplication(argument1, argument2));
+                        break;
+                    case "4":
+                        Console.WriteLine(calculator.Division(argument1, argument2));
+                        break;
+                    case "5":
+                        Console.WriteLine(calculatoradvanced.PrimeNumbers());
+                        break;
+                    case "6":
+                        Console.WriteLine(calculatoradvanced.Factorial());
+                        break;
+                    case "7":
+                        Console.WriteLine(calculatoradvanced.PerfectNumber());
+                        break;
+                    case "8":
+                        Console.WriteLine(calculator.ToThePower(argument1, argument2));
+                        break;
+                    case "9":
+                        Console.WriteLine(calculatoradvanced.AverageNumberFromTheTable());
+                        break;
+                    case "0":
+                        Console.WriteLine(calculatoradvanced.MaximumValueFromTheTable());
+                        break;
+                    case "*":
+                        Console.WriteLine(calculatoradvanced.MinimumValueFromTheTable());
+                        break;
+                    default:
+                        Console.WriteLine("Wrong operation!");
+                        break;
                 }
 
                 Console.ReadLine();
