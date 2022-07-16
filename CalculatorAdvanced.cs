@@ -8,12 +8,11 @@ namespace FirstProject
 {
     internal class CalculatorAdvanced
     {
-        public bool PrimeNumbers()
+        public bool PrimeNumbers(int argument1)
         {
-            int a = Convert.ToInt32(Console.ReadLine());
-            for (int i = 2; i < a; i++)
+            for (int i = 2; i < argument1; i++)
             {
-                if (a % i == 0)
+                if (argument1 % i == 0)
                 {
                     return false;
                 }
@@ -21,18 +20,18 @@ namespace FirstProject
             Console.ForegroundColor = ConsoleColor.Magenta;
             return true;
         }
-        public int Factorial()
+        public int Factorial(int argument1)
         {
-            int liczba, silnia = 1;
+            int strong = 1;
             Console.WriteLine("Podaj liczbę: ");
-            liczba = int.Parse(Console.ReadLine());
 
-            for (int i = 1; i <= liczba; i++)
-                silnia*=i;
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
-            return silnia;
+
+            for (int i = 1; i <= argument1; i++)
+                strong*=i;
+            //Console.ForegroundColor = ConsoleColor.DarkBlue;
+            return strong;
         }
-        public bool PerfectNumber()
+        public bool PerfectNumber(int argument1)
         {
             int n = 0;
             int suma = 0;
@@ -42,7 +41,7 @@ namespace FirstProject
             //Console.ForegroundColor = ConsoleColor.DarkGray;
             return (suma == n);
         }
-        public double AverageNumberFromTheTable()
+        public double AverageNumberFromTheTable(int argument1)
         {
             double srednia = 0;
             double suma = 0;

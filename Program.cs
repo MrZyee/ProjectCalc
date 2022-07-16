@@ -15,8 +15,9 @@ namespace FirstProject
                 CalculatorAdvanced calculatoradvanced = new CalculatorAdvanced();
                 FunctionCalculator function = new FunctionCalculator();
 
-                string operation = Convert.ToString(function.Function());
 
+                string operation = Convert.ToString(function.Function());
+                double result = 0;
                 Console.WriteLine("Podaj dwie liczby: ");
                 int argument1 = Convert.ToInt32(Console.ReadLine());
                 int argument2 = Convert.ToInt32(Console.ReadLine());
@@ -24,7 +25,8 @@ namespace FirstProject
                 switch (operation)
                 {
                     case "1":
-                        Console.WriteLine(calculator.Adding(argument1, argument2));
+                        result = calculator.Adding(argument1, argument2);
+                        ColorsInformations.WriteColorLine(result, ConsoleColor.Red);
                         break;
                     case "2":
                         Console.WriteLine(calculator.Subtraction(argument1, argument2));
@@ -36,19 +38,19 @@ namespace FirstProject
                         Console.WriteLine(calculator.Division(argument1, argument2));
                         break;
                     case "5":
-                        Console.WriteLine(calculatoradvanced.PrimeNumbers());
+                        Console.WriteLine(calculatoradvanced.PrimeNumbers(argument1));
                         break;
                     case "6":
-                        Console.WriteLine(calculatoradvanced.Factorial());
+                        Console.WriteLine(calculatoradvanced.Factorial(argument1));
                         break;
                     case "7":
-                        Console.WriteLine(calculatoradvanced.PerfectNumber());
+                        Console.WriteLine(calculatoradvanced.PerfectNumber(argument1));
                         break;
                     case "8":
                         Console.WriteLine(calculator.ToThePower(argument1, argument2));
                         break;
                     case "9":
-                        Console.WriteLine(calculatoradvanced.AverageNumberFromTheTable());
+                        Console.WriteLine(calculatoradvanced.AverageNumberFromTheTable(argument1));
                         break;
                     case "0":
                         Console.WriteLine(calculatoradvanced.MaximumValueFromTheTable());
