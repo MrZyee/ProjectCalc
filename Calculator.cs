@@ -13,7 +13,7 @@ namespace FirstProject
             //Console.ForegroundColor = ConsoleColor.Green;
             return arument1 + argument2;
         }
-        public double Subtraction(int arument1, int argument2)
+        public int Subtraction(int arument1, int argument2)
         {
             //Console.ForegroundColor = ConsoleColor.Red;
             return arument1 - argument2;
@@ -29,7 +29,7 @@ namespace FirstProject
             //Console.ForegroundColor = ConsoleColor.Yellow;
             return (double) arument1 / argument2;
         }
-        public double Multiplication(int arument1, int argument2)
+        public int Multiplication(int arument1, int argument2)
         {
             return arument1 * argument2;
         }

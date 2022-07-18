@@ -46,7 +46,7 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="CalculatorAdvanced.cs" />
     <Compile Include="ColorsInformations.cs" />
-    <Compile Include="FunctionCalculator.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
