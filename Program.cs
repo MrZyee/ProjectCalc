@@ -16,6 +16,7 @@ namespace FirstProject
             Menu menu = new Menu();
             int number1, number2, result;
             double doubleResult;
+            bool GreatNumber;
 
             menu.Show();
 
@@ -26,6 +27,7 @@ namespace FirstProject
             {
                 case 1:
                     {
+                        Console.WriteLine("Give two numbers: ");
                         number1 = Convert.ToInt32(Console.ReadLine());
                         number2 = Convert.ToInt32(Console.ReadLine());
                         result = calculator.Adding(number1, number2);
@@ -34,6 +36,7 @@ namespace FirstProject
                     }
                 case 2:
                     {
+                        Console.WriteLine("Give two numbers: ");
                         number1 = Convert.ToInt32(Console.ReadLine());
                         number2 = Convert.ToInt32(Console.ReadLine());
                         result = calculator.Subtraction(number1, number2);
@@ -42,6 +45,7 @@ namespace FirstProject
                     }
                 case 3:
                     {
+                        Console.WriteLine("Give two numbers: ");
                         number1 = Convert.ToInt32(Console.ReadLine());
                         number2 = Convert.ToInt32(Console.ReadLine());
                         result = calculator.Multiplication(number1, number2);
@@ -50,6 +54,7 @@ namespace FirstProject
                     }
                 case 4:
                     {
+                        Console.WriteLine("Give two numbers: ");
                         number1 = Convert.ToInt32(Console.ReadLine());
                         number2 = Convert.ToInt32(Console.ReadLine());
                         doubleResult = calculator.Division(number1, number2);
@@ -58,6 +63,7 @@ namespace FirstProject
                     }
                 case 6:
                     {
+                        Console.WriteLine("Give one number: ");
                         number1 = Convert.ToInt32(Console.ReadLine());
                         bool isPrime = calculatoradvanced.GetPrimeNumbers(number1);
                         if (isPrime)
@@ -72,9 +78,32 @@ namespace FirstProject
                     }
                 case 7:
                     {
-                        Console.WriteLine("Podaj ilość elementów w tablicy: ");
+                        Console.WriteLine("Give one number: ");
                         number1 = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Podaj liczby");
+                        GreatNumber = calculatoradvanced.GetGreatNumber(number1);
+                        if (GreatNumber == true)
+                        {
+                            ColorsInformations.ColorGreatNumber(GreatNumber, ConsoleColor.Green);
+                        }
+                        else
+                        {
+                            ColorsInformations.ColorGreatNumber(GreatNumber, ConsoleColor.Red);
+                        }
+                        break;
+                    }
+                case 8:
+                    {
+                        Console.WriteLine("Give one number: ");
+                        number1 = Convert.ToInt32(Console.ReadLine());
+                        result = calculatoradvanced.GetFactorial(number1);
+                        ColorsInformations.WriteColorLine(result, ConsoleColor.Magenta);
+                        break;
+                    }
+                case 9:
+                    {
+                        Console.WriteLine("Enter the number of elements in the array:: ");
+                        number1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter the number: ");
                         int[] tablica = new int[number1];
                         for (int i = 0; i < tablica.Length; i++)
                         {
@@ -84,52 +113,36 @@ namespace FirstProject
                         Console.WriteLine(doubleResult);
                         break;
                     }
+                case 10:
+                    {
+                        Console.WriteLine("Enter the number of elements in the array: ");
+                        number1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter the number: ");
+                        int[] table = new int[number1];
+                        for (int i = 0; i < table.Length; i++)
+                        {
+                            table[i] = int.Parse(Console.ReadLine());
+                        }
+                        doubleResult = calculatoradvanced.GetMaxFromTable(table);
+                        ColorsInformations.WriteColorLine(doubleResult, ConsoleColor.Magenta);
+                        break;
+                    }
+                case 11:
+                    {
+                        Console.WriteLine("Enter the number of elements in the array: ");
+                        number1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter the number: ");
+                        int[] table = new int[number1];
+                        for (int i = 0; i < table.Length; i++)
+                        {
+                            table[i] = int.Parse(Console.ReadLine());
+                        }
+                        doubleResult = calculatoradvanced.GetMinFromTable(table);
+                        ColorsInformations.WriteColorLine(doubleResult, ConsoleColor.Cyan); ;
+                        break;
+                    }
             }
 
-
-            //switch (operation)
-            //{
-            //    case "1":
-            //        result = calculator.Adding(argument1, argument2);
-            //        ColorsInformations.WriteColorLine(result, ConsoleColor.Green);
-            //        break;
-            //    case "2":
-            //        result = calculator.Subtraction(argument1, argument2);
-            //        ColorsInformations.WriteColorLine(result, ConsoleColor.Blue);
-            //        break;
-            //    case "3":
-            //        result = calculator.Multiplication(argument1, argument2);
-            //        ColorsInformations.WriteColorLine(result, ConsoleColor.Yellow);
-            //        break;
-            //    case "4":
-            //        result = calculator.Division(argument1, argument2);
-            //        ColorsInformations.WriteColorLine(result, ConsoleColor.Magenta);
-            //        break;
-            //    case "5":
-            //        Console.WriteLine(calculator.ToThePower(argument1, argument2));
-            //        break;
-            //    case "6":
-            //        Console.WriteLine(calculatoradvanced.PrimeNumbers(argument1));
-            //        break;
-            //    case "7":
-            //        Console.WriteLine(calculatoradvanced.PerfectNumber(argument1));
-            //        break;
-            //    case "8":
-            //        Console.WriteLine(calculatoradvanced.Factorial(argument1));
-            //        break;
-            //    case "9":
-            //        Console.WriteLine(calculatoradvanced.AverageNumberFromTheTable(argument1));
-            //        break;
-            //    case "0":
-            //        Console.WriteLine(calculatoradvanced.MaximumValueFromTheTable());
-            //        break;
-            //    case "*":
-            //        Console.WriteLine(calculatoradvanced.MinimumValueFromTheTable());
-            //        break;
-            //    default:
-            //        Console.WriteLine("Wrong operation!");
-            //        break;
-            //}
 
             Console.ReadLine();
 

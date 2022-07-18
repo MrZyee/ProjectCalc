@@ -16,7 +16,7 @@ namespace FirstProject
             Console.WriteLine("4. Division");
             Console.WriteLine("5. To the power");
             Console.WriteLine("6. Prime number");
-            Console.WriteLine("7. Perfect number");
+            Console.WriteLine("7. Great number");
             Console.WriteLine("8. Factorial");
             Console.WriteLine("9. Average number from the table");
             Console.WriteLine("10. Maximum number from the table");

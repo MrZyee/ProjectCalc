@@ -8,11 +8,18 @@ namespace FirstProject
 {
     internal static class ColorsInformations
     {
-       public static void WriteColorLine(double result,ConsoleColor color)
+       public static void WriteColorLine( double result,ConsoleColor color)
         {
            Console.ForegroundColor = color;
            Console.WriteLine(result);
            Console.ResetColor();
         }
+        public static void ColorGreatNumber(bool result, ConsoleColor color)
+        {
+            Console.ForegroundColor = color;
+            Console.WriteLine(result);
+            Console.ResetColor();
+        }
+
     }
 }

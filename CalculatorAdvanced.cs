@@ -30,14 +30,13 @@ namespace FirstProject
             return strong;
         }
 
-        public bool GreatNumber(int argument1)
+        public bool GetGreatNumber(int argument1)
         {
-            int n = 0;
             int suma = 0;
-            for (int i = 1; i <= n/2; i++)
-                if (n % i == 0)
+            for (int i = 1; i <= argument1/2; i++)
+                if (argument1 % i == 0)
                     suma += i;
-            return (suma == n);
+            return (suma == argument1);
         }
 
         public double GetAvgFromTable(int[] array)
@@ -65,24 +64,17 @@ namespace FirstProject
             return max;
         }
 
-        public double MinimumValueFromTheTable()
+        public double GetMinFromTable(int[] array)
         {
-            int min = 0;
-            Console.WriteLine("Podaj ilość elementów w tablicy:");
-            int a = int.Parse(Console.ReadLine());
-            int[] tablica = new int[a];
-            for (int i = 0; i < tablica.Length; i++)
+            int min = array[0];
+            
+            for (int i = 1; i < array.Length; i++)
             {
-                tablica[i] = int.Parse(Console.ReadLine());
-            }
-            for (int i = 0; i < tablica.Length; i++)
-            {
-                if (min < tablica[i])
+                if (min > array[i])
                 {
-                    min = tablica[i];
+                    min = array[i];
                 }
             }
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
             return min;
         }
     }
