@@ -10,9 +10,9 @@ namespace FirstProject
     {
        public static void WriteColorLine(double result,ConsoleColor color)
         {
-            Console.ForegroundColor = color;
+           Console.ForegroundColor = color;
            Console.WriteLine(result);
-            Console.ResetColor();
+           Console.ResetColor();
         }
     }
 }

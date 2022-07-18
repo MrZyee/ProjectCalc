@@ -31,8 +31,6 @@ namespace FirstProject
         }
         public double Multiplication(int arument1, int argument2)
         {
-
-            //Console.ForegroundColor = ConsoleColor.Cyan;
             return arument1 * argument2;
         }
 

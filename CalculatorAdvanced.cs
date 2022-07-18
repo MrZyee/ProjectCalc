@@ -28,7 +28,6 @@ namespace FirstProject
 
             for (int i = 1; i <= argument1; i++)
                 strong*=i;
-            //Console.ForegroundColor = ConsoleColor.DarkBlue;
             return strong;
         }
         public bool PerfectNumber(int argument1)
@@ -38,7 +37,6 @@ namespace FirstProject
             for (int i = 1; i <= n/2; i++)
                 if (n % i == 0)
                     suma += i;
-            //Console.ForegroundColor = ConsoleColor.DarkGray;
             return (suma == n);
         }
         public double AverageNumberFromTheTable(int argument1)
