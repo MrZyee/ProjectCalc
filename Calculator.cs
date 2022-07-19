@@ -8,11 +8,19 @@ namespace FirstProject
 {
     internal class Calculator
     {
-        public int Adding(int arument1, int argument2) => arument1 + argument2;
-        public int Subtraction(int arument1, int argument2) => arument1 - argument2;
-        public double Division(int arument1, int argument2) => (double)arument1 / argument2;
-        public int Multiplication(int arument1, int argument2) => arument1 * argument2;
-        public int ToThePower(int arument1, int argument2) => (int)Math.Pow(arument1, argument2);
+        public int Adding(int value1, int value2) => value1 + value2;
+        public int Subtraction(int value1, int value2) => value1 - value2;
+        public double Division(int value1, int value2) => (double)value1 / value2;
+        public int Multiplication(int value1, int value2) => value1 * value2;
+        public int ToThePower(int value1, int value2)
+        {
+            int result = 1;
+            for (int i = value2; i > 0; i--)
+            {
+                result *= value1;
+            }
+            return result;
+        }
     }
 }
 

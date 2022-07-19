@@ -61,6 +61,15 @@ namespace FirstProject
                         ColorsInformations.WriteColorLine(doubleResult, ConsoleColor.Magenta);
                         break;
                     }
+                case 5:
+                    {
+                        Console.WriteLine("Give two numbers: ");
+                        number1 = Convert.ToInt32(Console.ReadLine());
+                        number2 = Convert.ToInt32(Console.ReadLine());
+                        result = calculator.ToThePower(number1, number2);
+                        ColorsInformations.WriteColorLine(result, ConsoleColor.Yellow);
+                        break;
+                    }
                 case 6:
                     {
                         Console.WriteLine("Give one number: ");
