@@ -41,7 +41,8 @@ namespace FirstProject
 
         public double GetAvgFromTable(int[] array)
         {
-            double suma = 0;        
+            double suma = 0;  
+            
             for (int i = 0; i < array.Length; i++)
             {
                 suma += array[i];
@@ -52,7 +53,7 @@ namespace FirstProject
 
         public double GetMaxFromTable(int[] array)
         {
-            int max = 0;
+            int max = int.MaxValue;
 
             for (int i = 0; i < array.Length; i++)
             {
@@ -66,7 +67,7 @@ namespace FirstProject
 
         public double GetMinFromTable(int[] array)
         {
-            int min = array[0];
+            int min = int.MinValue;
             
             for (int i = 1; i < array.Length; i++)
             {
