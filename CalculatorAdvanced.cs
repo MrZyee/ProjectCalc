@@ -78,5 +78,14 @@ namespace FirstProject
             }
             return min;
         }
+        public int GetPowerOfNumber(int value1, int value2)
+        {
+            int result = 1;
+            for (int i = value2; i > 0; i--)
+            {
+                result *= value1;
+            }
+            return result;
+        }
     }
 }
